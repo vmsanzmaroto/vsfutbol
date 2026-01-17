@@ -1,0 +1,93 @@
+export type Product = {
+  slug: string;
+  team: string;
+  title: string;
+  price: string;
+  description: string;
+
+  // Todas las tallas que muestras
+  sizes: string[];
+
+  // Solo las tallas disponibles (las demás se verán tachadas)
+  inStockSizes: string[];
+
+  badges: Array<{ label: string; style: string }>;
+  images: string[];
+};
+
+export const products: Product[] = [
+  {
+    slug: "Arsenal",
+    team: "Arsenal",
+    title: "Retro Bergkamp",
+    price: "28€",
+    description:
+      "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
+    sizes: ["S", "M", "L", "XL"],
+    inStockSizes: ["L"],
+    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    images: [
+      "/products/arsenal1.jpg",
+      "/products/arsenal2.jpg",
+      "/products/arsenal3.jpg",
+    ],
+  },
+  {
+    slug: "Espana",
+    team: "España",
+    title: "2026 Local",
+    price: "28€",
+    description: "Camiseta de alta calidad, perfecta para animar a la selección.",
+    sizes: ["S", "M", "L", "XL"],
+    inStockSizes: ["M", "L"], // ejemplo: S agotada
+    badges: [{ label: "Selección", style: "from-emerald-600 to-teal-600" }],
+    images: [
+      "/products/españa1.jpeg",
+      "/products/españa2.jpeg",
+    ],
+  },
+   {
+    slug: "Atleti",
+    team: "Atletico de Madrid",
+    title: "Retro Cholo Simeone",
+    price: "28€",
+    description: "Camiseta de alta calidad, perfecta para animar a la selección.",
+    sizes: ["S", "M", "L", "XL"],
+    inStockSizes: ["L"], // ejemplo: S agotada
+    badges: [{ label: "retro", style: "from-emerald-600 to-teal-600" }],
+    images: [
+      "/products/cholo1.jpeg",
+      "/products/cholo2.jpeg",
+    ],
+  },
+
+  // ✅ TU PRODUCTO NUEVO (ejemplo Betis)
+  {
+    slug: "valladolid",
+    team: "valladolid",
+    title: "Retro Peternac",
+    price: "28€",
+    description: "Camiseta de alta calidad con gran acabado.",
+    sizes: ["S", "M", "L", "XL"],
+    inStockSizes: ["M"], // ejemplo: M agotada
+    badges: [{ label: "Retro", style: "from-fuchsia-600 to-rose-600" }],
+    images: ["/products/valladolid1.jpeg", 
+			"/products/valladolid2.jpeg",],
+  },
+    {
+    slug: "Madrid",
+    team: "Real Madrid",
+    title: "Retro Raul",
+    price: "28€",
+    description: "Camiseta de alta calidad con gran acabado.",
+    sizes: ["S", "M", "L", "XL"],
+    inStockSizes: ["L"], // ejemplo: M agotada
+    badges: [{ label: "Retro", style: "from-fuchsia-600 to-rose-600" }],
+    images: ["/products/raul1.jpeg", 
+			"/products/raul2.jpeg",],
+  },
+];
+
+export function getProductBySlug(slug: string) {
+  return products.find((p) => p.slug === slug);
+}
