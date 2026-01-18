@@ -54,7 +54,7 @@ export const products: Product[] = [
     description: "Camiseta de alta calidad, perfecta para animar a la selección.",
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["L"], // ejemplo: S agotada
-    badges: [{ label: "retro", style: "from-emerald-600 to-teal-600" }],
+    badges: [{ label: "Retro", style: "from-emerald-600 to-teal-600" }],
     images: [
       "/products/cholo1.jpeg",
       "/products/cholo2.jpeg",
@@ -85,6 +85,46 @@ export const products: Product[] = [
     badges: [{ label: "Retro", style: "from-fuchsia-600 to-rose-600" }],
     images: ["/products/raul1.jpeg", 
 			"/products/raul2.jpeg",],
+  },
+     {
+    slug: "Sevilla",
+    team: "Sevilla",
+    title: "2ª equipación Sevilla 25/26",
+    price: "22€",
+    description: "Camiseta de alta calidad con gran acabado.",
+    sizes: ["S","M", "L", "XL"],
+    inStockSizes: ["M"], // ejemplo: M agotada
+    badges: [{ label: "Liga", style: "from-fuchsia-600 to-rose-600" }],
+    images: ["/products/sevilla1.jpeg", 
+			"/products/sevilla2.jpeg",
+			"/products/sevilla3.jpeg"],
+  },
+      {
+    slug: "Celta",
+    team: "Celta",
+    title: "Celta centenario 23/24",
+    price: "28€",
+    description: "Camiseta de alta calidad con gran acabado.",
+    sizes: ["S","M", "L", "XL"],
+    inStockSizes: ["M"], // ejemplo: M agotada
+    badges: [{ label: "Retro", style: "from-fuchsia-600 to-rose-600" }],
+    images: ["/products/celta1.jpeg", 
+			"/products/celta2.jpeg",
+			"/products/celta3.jpeg",
+			"/products/celta4.jpeg"],
+  },
+      {
+    slug: "Celtic",
+    team: "Celtic",
+    title: "Celtic Glasgow 22/23",
+    price: "28€",
+    description: "Camiseta de alta calidad con gran acabado.",
+    sizes: ["S","M", "L", "XL"],
+    inStockSizes: ["M"], // ejemplo: M agotada
+    badges: [{ label: "Retro", style: "from-fuchsia-600 to-rose-600" }],
+    images: ["/products/celtic1.jpeg", 
+			"/products/celtic2.jpeg",
+			"/products/celtic3.jpeg"],
   },
 ];
 
