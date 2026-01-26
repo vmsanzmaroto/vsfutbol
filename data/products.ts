@@ -39,7 +39,7 @@ export const products: Product[] = [
     price: "28€",
     description: "Camiseta de alta calidad, perfecta para animar a la selección.",
     sizes: ["S", "M", "L", "XL"],
-    inStockSizes: ["M", "L"], // ejemplo: S agotada
+    inStockSizes: ["M"], // ejemplo: S agotada
     badges: [{ label: "Selección", style: "from-emerald-600 to-teal-600" }],
     images: [
       "/products/españa1.jpeg",
@@ -117,7 +117,7 @@ export const products: Product[] = [
     slug: "Celtic",
     team: "Celtic",
     title: "Celtic Glasgow 22/23",
-    price: "28€",
+    price: "22€",
     description: "Camiseta de alta calidad con gran acabado.",
     sizes: ["S","M", "L", "XL"],
     inStockSizes: ["M"], // ejemplo: M agotada
