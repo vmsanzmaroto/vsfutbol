@@ -126,6 +126,62 @@ export const products: Product[] = [
 			"/products/celtic2.jpeg",
 			"/products/celtic3.jpeg"],
   },
+  {
+    slug: "Arsenal",
+    team: "Arsenal",
+    title: "Retro Bergkamp",
+    price: "28€",
+    description:
+      "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
+    sizes: ["S", "M", "L", "XL"],
+    inStockSizes: ["M"],
+    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    images: [
+      "/products/berkamp1.jpeg",
+      "/products/berkamp2.jpeg",
+      "/products/berkamp3.jpeg",
+	  "/products/berkamp4.jpeg",
+	  "/products/berkamp5.jpeg",
+    ],
+  },
+   {
+    slug: "Francia 98",
+    team: "Francia 98",
+    title: "Francia 98 Zidane",
+    price: "28€",
+    description:
+      "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
+    sizes: ["S", "M", "L", "XL"],
+    inStockSizes: ["M", "L"],
+    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    images: [
+      "/products/zidane1.jpeg",
+      "/products/zidane2.jpeg",
+      "/products/zidane3.jpeg",
+	  "/products/zidane4.jpeg",
+	  "/products/zidane5.jpeg",
+	  "/products/zidane6.jpeg",
+	  "/products/zidane7.jpeg",
+    ],
+	},
+
+  	  {
+    slug: "Argentida",
+    team: "Argentina",
+    title: "Argentina Messi",
+    price: "23€",
+    description:
+      "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
+    sizes: ["S", "M", "L", "XL"],
+    inStockSizes: ["M", "L"],
+    badges: [{ label: "selección", style: "from-blue-600 to-fuchsia-600" }],
+    images: [
+      "/products/messi1.jpeg",
+      "/products/messi2.jpeg",
+      "/products/messi3.jpeg",
+	  "/products/messi4.jpeg",
+    ],
+  },
 ];
 
 export function getProductBySlug(slug: string) {
