@@ -127,9 +127,9 @@ export const products: Product[] = [
 			"/products/celtic3.jpeg"],
   },
   {
-    slug: "Arsenal",
-    team: "Arsenal",
-    title: "Retro Bergkamp",
+    slug: "Arsenal-2",
+    team: "Arsenal 2",
+    title: "Retro Arsenal Bergkamp",
     price: "28€",
     description:
       "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
@@ -145,7 +145,7 @@ export const products: Product[] = [
     ],
   },
    {
-    slug: "Francia 98",
+    slug: "Francia-98",
     team: "Francia 98",
     title: "Francia 98 Zidane",
     price: "28€",
@@ -182,8 +182,8 @@ export const products: Product[] = [
     ],
   },
    {
-    slug: "O. LYON",
-    team: "O. LYON",
+    slug: "O-LYON",
+    team: "O LYON",
     title: "Retro Benzema",
     price: "28€",
     description:
