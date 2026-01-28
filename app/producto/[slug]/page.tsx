@@ -1,25 +1,32 @@
 import Link from "next/link";
 import { products, getProductBySlug } from "../../../data/products";
 import ProductGallery from "../../../components/ProductGallery";
-import { slugify } from "../../../lib/slug";
 
-// 🔒 MODO ESTÁTICO SEGURO
+// 🔒 Modo estático (seguro en Vercel)
 export const dynamicParams = false;
 
-// ✅ Genera todas las páginas /producto/[slug] en build (Vercel)
 export function generateStaticParams() {
   return products.map((p) => ({
-    slug: slugify(p.slug),
+    slug: p.slug
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase()
+      .trim()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, ""),
   }));
 }
 
-export default function ProductPage({
+export default async function ProductPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const slug = decodeURIComponent(params.slug);
-  const product = getProductBySlug(slug);
+  const { slug } = await params;
+  const cleanSlug = decodeURIComponent(slug);
+
+  // ✅ AQUÍ se define product (antes del if)
+  const product = getProductBySlug(cleanSlug);
 
   if (!product) {
     return (
@@ -32,7 +39,7 @@ export default function ProductPage({
           <h1 className="text-2xl font-extrabold">Producto no encontrado</h1>
           <p className="mt-2 text-slate-700">Este producto no existe o no está disponible.</p>
           <p className="mt-2 text-xs text-slate-600">
-            Slug recibido: <span className="font-bold">{slug}</span>
+            Slug recibido: <span className="font-bold">{cleanSlug}</span>
           </p>
         </section>
       </main>
@@ -88,6 +95,7 @@ export default function ProductPage({
                         ? "border-slate-200 bg-white text-slate-900"
                         : "border-slate-200 bg-white/60 text-slate-500 line-through opacity-60",
                     ].join(" ")}
+                    title={inStock ? "Disponible" : "Agotada"}
                   >
                     {size}
                   </span>
