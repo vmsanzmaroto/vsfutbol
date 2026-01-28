@@ -164,7 +164,6 @@ export const products: Product[] = [
 	  "/products/zidane7.jpeg",
     ],
 	},
-
   	  {
     slug: "Argentida",
     team: "Argentina",
@@ -180,6 +179,59 @@ export const products: Product[] = [
       "/products/messi2.jpeg",
       "/products/messi3.jpeg",
 	  "/products/messi4.jpeg",
+    ],
+  },
+   {
+    slug: "O. LYON",
+    team: "O. LYON",
+    title: "Retro Benzema",
+    price: "28€",
+    description:
+      "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
+    sizes: ["S", "M", "L", "XL"],
+    inStockSizes: ["M","L"],
+    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    images: [
+      "/products/benzema1.jpeg",
+	  "/products/benzema2.jpeg",
+	  "/products/benzema3.jpeg",
+	  "/products/benzema4.jpeg",
+	  "/products/benzema5.jpeg",
+    ],
+  },
+    {
+    slug: "Juventus",
+    team: "Juventus",
+    title: "Retro Juventus CR",
+    price: "28€",
+    description:
+      "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
+    sizes: ["S", "M", "L", "XL"],
+    inStockSizes: ["M","L"],
+    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    images: [
+      "/products/cr1.jpeg",
+	  "/products/cr2.jpeg",
+	  "/products/cr3.jpeg",
+	  "/products/cr4.jpeg",
+	  "/products/cr5.jpeg",
+    ],
+  },
+      {
+    slug: "Croacia",
+    team: "Croacia",
+    title: "Croacia Modric",
+    price: "23€",
+    description:
+      "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
+    sizes: ["S", "M", "L", "XL"],
+    inStockSizes: ["M","L"],
+    badges: [{ label: "selección", style: "from-blue-600 to-fuchsia-600" }],
+    images: [
+      "/products/modric.jpeg",
+	  "/products/modric1.jpeg",
+	  "/products/modric2.jpeg",
+	  "/products/modric3.jpeg",
     ],
   },
 ];
