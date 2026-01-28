@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useMemo, useState } from "react";
 import { products } from "../../data/products";
+import { slugify } from "../../lib/slug";
 
 export default function TiendaPage() {
   const [nameQuery, setNameQuery] = useState("");
@@ -30,8 +31,8 @@ export default function TiendaPage() {
     const q = nameQuery.trim().toLowerCase();
 
     return products.filter((p) => {
-      // "Búsqueda por nombre": busca por equipo, título y también slug por si acaso
-      const haystack = `${p.team} ${p.title} ${p.slug}`.toLowerCase();
+      // Búsqueda por nombre: equipo + título + slug (si existe)
+      const haystack = `${p.team} ${p.title} ${p.slug ?? ""}`.toLowerCase();
       const matchName = q === "" || haystack.includes(q);
 
       // Talla disponible (en stock)
@@ -130,61 +131,66 @@ export default function TiendaPage() {
 
       {/* LISTADO */}
       <section className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {filtered.map((p) => (
-          <Link
-            key={p.slug}
-            href={`/producto/${p.slug}`}
-            className="group overflow-hidden rounded-3xl border border-slate-200/60 bg-white/60 shadow-sm backdrop-blur transition hover:-translate-y-0.5 hover:shadow-md"
-          >
-            <div className="relative h-56">
-              <Image
-                src={p.images[0]}
-                alt={`Camiseta ${p.team} ${p.title}`}
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 33vw"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-black/0 to-black/0" />
+        {filtered.map((p) => {
+          // ✅ slug limpio SIEMPRE (aunque p.slug tenga espacios, puntos, etc.)
+          const cleanSlug = slugify(p.slug ?? `${p.team} ${p.title}`);
 
-              <div className="absolute left-5 top-5 flex flex-wrap gap-2">
-                {p.badges?.slice(0, 2).map((b) => (
-                  <span
-                    key={b.label}
-                    className={`inline-flex items-center rounded-full bg-gradient-to-r ${b.style} px-3 py-1 text-xs font-extrabold text-white shadow-sm`}
-                  >
-                    {b.label}
-                  </span>
-                ))}
-              </div>
+          return (
+            <Link
+              key={cleanSlug}
+              href={`/producto/${cleanSlug}`}
+              className="group overflow-hidden rounded-3xl border border-slate-200/60 bg-white/60 shadow-sm backdrop-blur transition hover:-translate-y-0.5 hover:shadow-md"
+            >
+              <div className="relative h-56">
+                <Image
+                  src={p.images[0]}
+                  alt={`Camiseta ${p.team} ${p.title}`}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-black/0 to-black/0" />
 
-              <div className="absolute bottom-4 left-5 right-5">
-                <div className="text-sm font-extrabold text-white">{p.team}</div>
-                <div className="text-xs text-white/90">{p.title}</div>
-              </div>
-            </div>
-
-            <div className="p-5">
-              <div className="flex items-start justify-between gap-3">
-                <div>
-                  <div className="text-sm font-extrabold text-slate-900">Camiseta {p.team}</div>
-                  <div className="mt-1 text-sm text-slate-700">{p.title} — Alta calidad</div>
+                <div className="absolute left-5 top-5 flex flex-wrap gap-2">
+                  {p.badges?.slice(0, 2).map((b) => (
+                    <span
+                      key={b.label}
+                      className={`inline-flex items-center rounded-full bg-gradient-to-r ${b.style} px-3 py-1 text-xs font-extrabold text-white shadow-sm`}
+                    >
+                      {b.label}
+                    </span>
+                  ))}
                 </div>
-                <div className="text-sm font-extrabold text-slate-900">{p.price}</div>
+
+                <div className="absolute bottom-4 left-5 right-5">
+                  <div className="text-sm font-extrabold text-white">{p.team}</div>
+                  <div className="text-xs text-white/90">{p.title}</div>
+                </div>
               </div>
 
-              <div className="mt-3 text-xs text-slate-600">
-                Tallas en stock:{" "}
-                <span className="font-bold text-slate-700">
-                  {p.inStockSizes.join(", ")}
-                </span>
-              </div>
+              <div className="p-5">
+                <div className="flex items-start justify-between gap-3">
+                  <div>
+                    <div className="text-sm font-extrabold text-slate-900">Camiseta {p.team}</div>
+                    <div className="mt-1 text-sm text-slate-700">{p.title} — Alta calidad</div>
+                  </div>
+                  <div className="text-sm font-extrabold text-slate-900">{p.price}</div>
+                </div>
 
-              <div className="mt-4 inline-flex items-center gap-2 text-sm font-extrabold text-slate-900">
-                Ver producto <span className="transition group-hover:translate-x-0.5">→</span>
+                <div className="mt-3 text-xs text-slate-600">
+                  Tallas en stock:{" "}
+                  <span className="font-bold text-slate-700">
+                    {p.inStockSizes.join(", ")}
+                  </span>
+                </div>
+
+                <div className="mt-4 inline-flex items-center gap-2 text-sm font-extrabold text-slate-900">
+                  Ver producto <span className="transition group-hover:translate-x-0.5">→</span>
+                </div>
               </div>
-            </div>
-          </Link>
-        ))}
+            </Link>
+          );
+        })}
       </section>
 
       <div className="text-center">
