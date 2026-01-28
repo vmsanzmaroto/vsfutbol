@@ -34,11 +34,11 @@ export const products: Product[] = [
     slug: "Espana",
     team: "España",
     title: "2026 Local",
-    price: "28€",
+    price: "22€",
     description: "Camiseta de alta calidad, perfecta para animar a la selección.",
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["M"],
-    badges: [{ label: "Selección", style: "from-emerald-600 to-teal-600" }],
+    badges: [{ label: "selección", style: "from-emerald-600 to-teal-600" }],
     images: ["/products/españa1.jpeg", "/products/españa2.jpeg"],
   },
   {
@@ -136,7 +136,7 @@ export const products: Product[] = [
     slug: "Argentida",
     team: "Argentina",
     title: "Argentina Messi",
-    price: "23€",
+    price: "22€",
     description:
       "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
     sizes: ["S", "M", "L", "XL"],
@@ -172,7 +172,7 @@ export const products: Product[] = [
     slug: "Croacia",
     team: "Croacia",
     title: "Croacia Modric",
-    price: "23€",
+    price: "22€",
     description:
       "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
     sizes: ["S", "M", "L", "XL"],
