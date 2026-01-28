@@ -4,7 +4,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { useMemo, useState } from "react";
 import { products } from "../../data/products";
-import { slugify } from "../../lib/slug";
+import { slugify } from "@/lib/slug";
+
 
 export default function TiendaPage() {
   const [nameQuery, setNameQuery] = useState("");

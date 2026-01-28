@@ -3,17 +3,17 @@ import { products, getProductBySlug } from "../../../data/products";
 import ProductGallery from "../../../components/ProductGallery";
 import { slugify } from "../../../lib/slug";
 
-// 🔒 MODO ESTÁTICO SEGURO (lo que elegiste)
+// 🔒 MODO ESTÁTICO SEGURO
 export const dynamicParams = false;
 
-// 👇 AQUÍ ESTÁ LA CLAVE
+// ✅ Genera todas las páginas /producto/[slug] en build (Vercel)
 export function generateStaticParams() {
   return products.map((p) => ({
     slug: slugify(p.slug),
   }));
 }
 
-export default async function ProductPage({
+export default function ProductPage({
   params,
 }: {
   params: { slug: string };
@@ -30,9 +30,7 @@ export default async function ProductPage({
 
         <section className="rounded-3xl border border-slate-200/60 bg-white/60 p-8 backdrop-blur">
           <h1 className="text-2xl font-extrabold">Producto no encontrado</h1>
-          <p className="mt-2 text-slate-700">
-            Este producto no existe o no está disponible.
-          </p>
+          <p className="mt-2 text-slate-700">Este producto no existe o no está disponible.</p>
           <p className="mt-2 text-xs text-slate-600">
             Slug recibido: <span className="font-bold">{slug}</span>
           </p>
@@ -52,12 +50,14 @@ export default async function ProductPage({
       </Link>
 
       <section className="grid gap-6 lg:grid-cols-2">
+        {/* FOTO */}
         <ProductGallery
           images={product.images}
           alt={`Camiseta ${product.team} ${product.title}`}
           badges={product.badges}
         />
 
+        {/* INFO */}
         <div className="rounded-3xl border border-slate-200/60 bg-white/60 p-6 backdrop-blur">
           <h1 className="text-2xl font-extrabold tracking-tight md:text-3xl">
             Camiseta {product.team} {product.title} — Alta calidad
@@ -94,6 +94,10 @@ export default async function ProductPage({
                 );
               })}
             </div>
+
+            <div className="mt-3 text-xs text-slate-600">
+              Consejo: si dudas entre dos tallas, elige la más grande.
+            </div>
           </div>
 
           <div className="mt-6 flex flex-wrap gap-3">
@@ -118,4 +122,3 @@ export default async function ProductPage({
     </main>
   );
 }
-
