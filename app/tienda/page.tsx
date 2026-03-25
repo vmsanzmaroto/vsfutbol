@@ -2,36 +2,59 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useMemo, useState } from "react";
-import { getRandomProducts } from "../../data/products";
+import { useEffect, useMemo, useState } from "react";
+import { products } from "../../data/products";
 import { slugify } from "@/lib/slug";
 
+function shuffleArray<T>(array: T[]) {
+  const shuffled = [...array];
+
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+
+  return shuffled;
+}
+
 export default function TiendaPage() {
-  const randomProducts = useMemo(() => getRandomProducts(), []);
+  const [orderedProducts, setOrderedProducts] = useState(products);
   const [nameQuery, setNameQuery] = useState("");
   const [sizeFilter, setSizeFilter] = useState("");
   const [typeFilter, setTypeFilter] = useState("");
 
+  useEffect(() => {
+    const topProducts = products.filter((p) =>
+      (p.badges || []).some((b) => b.label === "Top")
+    );
+
+    const normalProducts = products.filter(
+      (p) => !(p.badges || []).some((b) => b.label === "Top")
+    );
+
+    setOrderedProducts([...topProducts, ...shuffleArray(normalProducts)]);
+  }, []);
+
   const allSizes = useMemo(() => {
     const set = new Set<string>();
-    for (const p of randomProducts) {
+    for (const p of orderedProducts) {
       for (const s of p.sizes) set.add(s);
     }
-    return Array.from(set);
-  }, [randomProducts]);
+    return Array.from(set).sort();
+  }, [orderedProducts]);
 
   const allTypes = useMemo(() => {
     const set = new Set<string>();
-    for (const p of randomProducts) {
+    for (const p of orderedProducts) {
       for (const b of p.badges || []) set.add(b.label);
     }
-    return Array.from(set);
-  }, [randomProducts]);
+    return Array.from(set).sort();
+  }, [orderedProducts]);
 
   const filtered = useMemo(() => {
     const q = nameQuery.trim().toLowerCase();
 
-    return randomProducts.filter((p) => {
+    return orderedProducts.filter((p) => {
       const haystack = `${p.team} ${p.title} ${p.slug ?? ""}`.toLowerCase();
       const matchName = q === "" || haystack.includes(q);
 
@@ -44,7 +67,7 @@ export default function TiendaPage() {
 
       return matchName && matchSize && matchType;
     });
-  }, [nameQuery, sizeFilter, typeFilter, randomProducts]);
+  }, [nameQuery, sizeFilter, typeFilter, orderedProducts]);
 
   return (
     <main className="space-y-10">
