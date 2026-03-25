@@ -21,6 +21,7 @@ export type Product = {
 export const products: Product[] = [
   {
     slug: "Madrid",
+	team: "Real Madrid",
     title: "Real Madrid 26/27",
     price: "20€",
     description:
@@ -32,6 +33,7 @@ export const products: Product[] = [
   },
   {
     slug: "Madrid1",
+	team: "Real Madrid",
     title: "Real Madrid 99/00",
     price: "26€",
     description:
@@ -43,6 +45,7 @@ export const products: Product[] = [
   },
     {
     slug: "Madrid2",
+	team: "Real Madrid",
     title: "Real Madrid 94/96",
     price: "26€",
     description:
@@ -54,6 +57,7 @@ export const products: Product[] = [
   },
      {
     slug: "Madrid3",
+	team: "Real Madrid",
     title: "Real Madrid 97/98",
     price: "26€",
     description:
@@ -65,6 +69,7 @@ export const products: Product[] = [
   },
        {
     slug: "Madrid4",
+	team: "Real Madrid",
     title: "Real Madrid 86/88",
     price: "26€",
     description:
@@ -76,6 +81,7 @@ export const products: Product[] = [
   },
          {
     slug: "Madrid5",
+	team: "Real Madrid",
     title: "Real Madrid 86/88",
     price: "26€",
     description:
@@ -87,6 +93,7 @@ export const products: Product[] = [
   },
           {
     slug: "atleti",
+	team: "Atletico de Madrid",
     title: "Atletico de Madrid 96/97",
     price: "26€",
     description:
@@ -98,6 +105,7 @@ export const products: Product[] = [
   },
             {
     slug: "atleti1",
+	team: "Atletico de Madrid",
     title: "Atletico de Madrid 97/98",
     price: "26€",
     description:
@@ -109,6 +117,7 @@ export const products: Product[] = [
   },
               {
     slug: "atleti2",
+	team: "Atletico de Madrid",
     title: "Atletico de Madrid 99/00",
     price: "26€",
     description:
@@ -120,6 +129,7 @@ export const products: Product[] = [
   },
   {
     slug: "atleti3",
+	team: "Atletico de Madrid",
     title: "Atletico de Madrid 25/26",
     price: "20€",
     description:
@@ -131,6 +141,7 @@ export const products: Product[] = [
   },
   {
     slug: "atleti4",
+	team: "Atletico de Madrid",
     title: "Atletico de Madrid 94/95",
     price: "26€",
     description:
@@ -142,6 +153,7 @@ export const products: Product[] = [
   }, 
   {
     slug: "atleti5",
+	team: "Atletico de Madrid",
     title: "Atletico de Madrid 13/14",
     price: "26€",
     description:
@@ -153,6 +165,7 @@ export const products: Product[] = [
   }, 
   {
     slug: "barsa",
+	team: "Barcelona",
     title: "Barcelona 25/26",
     price: "20€",
     description:
@@ -164,6 +177,7 @@ export const products: Product[] = [
   },  
     {
     slug: "barsa1",
+	team: "Barcelona",
     title: "Barcelona 95/97",
     price: "26€",
     description:
@@ -175,6 +189,7 @@ export const products: Product[] = [
   },  
       {
     slug: "barsa2",
+	team: "Barcelona",
     title: "Barcelona 98/99",
     price: "26€",
     description:
@@ -186,6 +201,7 @@ export const products: Product[] = [
   },  
         {
     slug: "barsa3",
+	team: "Barcelona",
     title: "Barcelona 15/16",
     price: "26€",
     description:
@@ -197,6 +213,7 @@ export const products: Product[] = [
   }, 
           {
     slug: "barsa4",
+	team: "Barcelona",
     title: "Barcelona 08/09",
     price: "26€",
     description:
@@ -208,6 +225,7 @@ export const products: Product[] = [
   }, 
             {
     slug: "barsa5",
+	team: "Barcelona",
     title: "Barcelona 13/14",
     price: "26€",
     description:
@@ -219,6 +237,7 @@ export const products: Product[] = [
   }, 
               {
     slug: "bilbao",
+	team: "bilbao",
     title: "Athletic Bilbao 25/26",
     price: "20€",
     description:
@@ -230,6 +249,7 @@ export const products: Product[] = [
   }, 
                 {
     slug: "bilbao1",
+	team: "bilbao",
     title: "Athletic Bilbao 100 aniversario",
     price: "26€",
     description:
@@ -241,6 +261,7 @@ export const products: Product[] = [
   }, 
                 {
     slug: "bilbao2",
+	team: "bilbao",
     title: "Athletic Bilbao 97/98",
     price: "26€",
     description:
@@ -252,6 +273,7 @@ export const products: Product[] = [
   },
                   {
     slug: "bilbao3",
+	team: "bilbao",
     title: "Athletic Bilbao 11/12",
     price: "26€",
     description:
@@ -263,6 +285,7 @@ export const products: Product[] = [
   },
                     {
     slug: "bilbao4",
+	team: "bilbao",
     title: "Athletic Bilbao 97/98",
     price: "26€",
     description:
@@ -274,6 +297,7 @@ export const products: Product[] = [
   },
                       {
     slug: "bilbao5",
+	team: "bilbao",
     title: "Athletic Bilbao 94/95",
     price: "26€",
     description:
@@ -284,7 +308,8 @@ export const products: Product[] = [
     images: ["/products/bilbao10.jpg", "/products/bilbao11.jpg"],
   },
   {
-      slug: "real" 	,
+      slug: "real",
+	  team: "Real sociedad",
     title: "Real Sociedad 25/26",
     price: "20€",
     description:
@@ -295,7 +320,8 @@ export const products: Product[] = [
     images: ["/products/rs.jpg", "/products/rs1.jpg"],
   }, 
    {
-      slug: "real1" 	,
+      slug: "real1",
+	  team: "Real sociedad",
     title: "Real Sociedad 95/96",
     price: "26€",
     description:
@@ -306,7 +332,8 @@ export const products: Product[] = [
     images: ["/products/rs2.jpg", "/products/rs3.jpg"],
   }, 
    {
-      slug: "real2" 	,
+      slug: "real2",
+	  team: "Real sociedad",
     title: "Real Sociedad 99/00",
     price: "26€",
     description:
@@ -317,7 +344,8 @@ export const products: Product[] = [
     images: ["/products/rs4.jpg", "/products/rs5.jpg"],
   }, 
      {
-      slug: "real3" 	,
+      slug: "real3",
+	  team: "Real sociedad",
     title: "Real Sociedad 00/02",
     price: "26€",
     description:
@@ -328,7 +356,8 @@ export const products: Product[] = [
     images: ["/products/rs6.jpg", "/products/rs7.jpg"],
   }, 
       {
-      slug: "real4" 	,
+      slug: "real4",
+	  team: "Real sociedad",
     title: "Real Sociedad 03/03",
     price: "26€",
     description:
@@ -339,7 +368,8 @@ export const products: Product[] = [
     images: ["/products/rs8.jpg", "/products/rs9.jpg"],
   }, 
       {
-      slug: "real5" 	,
+      slug: "real5",
+	  team: "Real sociedad",
     title: "Real Sociedad 94/95",
     price: "26€",
     description:
@@ -350,7 +380,8 @@ export const products: Product[] = [
     images: ["/products/rs10.jpg", "/products/rs11.jpg"],
   }, 
         {
-      slug: "betis" 	,
+      slug: "betis" ,
+	  team: "Betis",
     title: "Betis 25/26",
     price: "20€",
     description:
@@ -361,7 +392,8 @@ export const products: Product[] = [
     images: ["/products/betis.jpg", "/products/betis1.jpg", "/products/betis12.jpg"],
   }, 
           {
-      slug: "betis1" 	,
+      slug: "betis1" ,
+	  team: "Betis",
     title: "Betis 95/97",
     price: "26€",
     description:
@@ -372,7 +404,8 @@ export const products: Product[] = [
     images: ["/products/betis2.jpg", "/products/betis3.jpg"],
   }, 
             {
-      slug: "betis2" 	,
+      slug: "betis2",
+	  team: "Betis",
     title: "Betis 99/00",
     price: "26€",
     description:
@@ -383,7 +416,8 @@ export const products: Product[] = [
     images: ["/products/betis4.jpg", "/products/betis5.jpg"],
   }, 
               {
-      slug: "betis3" 	,
+      slug: "betis3",
+	  team: "Betis",
     title: "Betis 96/97",
     price: "26€",
     description:
@@ -394,7 +428,8 @@ export const products: Product[] = [
     images: ["/products/betis6.jpg", "/products/betis7.jpg"],
   }, 
                {
-      slug: "betis4" 	,
+      slug: "betis4",
+	  team: "Betis",
     title: "Betis 95/96",
     price: "26€",
     description:
@@ -405,7 +440,8 @@ export const products: Product[] = [
     images: ["/products/betis8.jpg", "/products/betis9.jpg"],
   }, 
                  {
-      slug: "betis5" 	,
+      slug: "betis5",
+	  team: "Betis",
     title: "Betis 98/99",
     price: "26€",
     description:
@@ -416,7 +452,8 @@ export const products: Product[] = [
     images: ["/products/betis10.jpg", "/products/betis11.jpg"],
   },
 		{
-	   slug: "celta" 	,
+	   slug: "celta",
+	   team: "Celta",
     title: "Celta 25/26",
     price: "20€",
     description:
@@ -427,7 +464,8 @@ export const products: Product[] = [
     images: ["/products/celta.jpg", "/products/celta1.jpg", "/products/celta15.jpg"],
   }, 
                    {
-      slug: "celta1" 	,
+      slug: "celta1",
+	  team: "Celta",
     title: "Celta 05/07",
     price: "26€",
     description:
@@ -438,7 +476,8 @@ export const products: Product[] = [
     images: ["/products/celta2.jpg", "/products/celta3.jpg"],
   },
                      {
-      slug: "celta2" 	,
+      slug: "celta2",
+	  team: "Celta",
     title: "Celta 01/02",
     price: "26€",
     description:
@@ -449,7 +488,8 @@ export const products: Product[] = [
     images: ["/products/celta4.jpg", "/products/celta5.jpg"],
   },
                        {
-      slug: "celta3" 	,
+      slug: "celta3",
+	  team: "Celta",
     title: "Celta 02/04",
     price: "26€",
     description:
@@ -460,7 +500,8 @@ export const products: Product[] = [
     images: ["/products/celta6.jpg", "/products/celta7.jpg"],
   },
                         {
-      slug: "celta4" 	,
+      slug: "celta4",
+	  team: "Celta",
     title: "Celta 01/02",
     price: "26€",
     description:
@@ -471,7 +512,8 @@ export const products: Product[] = [
     images: ["/products/celta8.jpg", "/products/celta9.jpg"],
   },
                           {
-      slug: "Girona" 	,
+      slug: "Girona",
+	  team: "Girona",
     title: "Girona 25/26",
     price: "20€",
     description:
@@ -482,7 +524,8 @@ export const products: Product[] = [
     images: ["/products/girona.jpg", "/products/girona1.jpg"],
   },
                             {
-      slug: "Girona1" 	,
+      slug: "Girona1",
+	  team: "Girona",
     title: "Girona 25/26",
     price: "20€",
     description:
@@ -493,7 +536,8 @@ export const products: Product[] = [
     images: ["/products/girona2.jpg", "/products/girona3.jpg"],
   },
                               {
-      slug: "Villarreal" 	,
+      slug: "Villarreal",
+	  team: "Villarreal",
     title: "Villarreal 25/26",
     price: "20€",
     description:
@@ -504,7 +548,8 @@ export const products: Product[] = [
     images: ["/products/villarreal.jpg", "/products/Villarreal1.jpg"],
   },
                                 {
-      slug: "Villarreal1" 	,
+      slug: "Villarreal1",
+	  team: "Villarreal",
     title: "Villarreal 25/26",
     price: "20€",
     description:
@@ -515,7 +560,8 @@ export const products: Product[] = [
     images: ["/products/villarreal2.jpg", "/products/Villarreal3.jpg"],
   },
                                   {
-      slug: "Villarreal2" 	,
+      slug: "Villarreal2",
+	  team: "Villarreal",
     title: "Villarreal 08/09",
     price: "20€",
     description:
@@ -526,7 +572,8 @@ export const products: Product[] = [
     images: ["/products/villarreal4.jpg", "/products/Villarreal5.jpg"],
   },
                                 {
-      slug: "Valencia" 	,
+      slug: "Valencia",
+	  team: "Valencia",
     title: "Valencia 25/26",
     price: "20€",
     description:
@@ -537,7 +584,8 @@ export const products: Product[] = [
     images: ["/products/valencia.jpg", "/products/Valencia1.jpg", "/products/Valencia10.jpg"],
   },
             {
-      slug: "Valencia1" 	,
+      slug: "Valencia1",
+	  team: "Valencia",
     title: "Valencia 80/82",
     price: "26€",
     description:
@@ -548,7 +596,8 @@ export const products: Product[] = [
     images: ["/products/valencia2.jpg", "/products/Valencia3.jpg", "/products/Valencia10.jpg"],
   },
               {
-      slug: "Valencia2" 	,
+      slug: "Valencia2",
+	  team: "Valencia",
     title: "Valencia 04/05",
     price: "26€",
     description:
@@ -559,7 +608,8 @@ export const products: Product[] = [
     images: ["/products/valencia4.jpg", "/products/Valencia5.jpg", "/products/Valencia10.jpg"],
   },
               {
-      slug: "Valencia3" 	,
+      slug: "Valencia3",
+	  team: "Valencia",
     title: "Valencia 00/02",
     price: "26€",
     description:
@@ -570,7 +620,8 @@ export const products: Product[] = [
     images: ["/products/valencia6.jpg", "/products/Valencia7.jpg", "/products/Valencia10.jpg"],
   },
               {
-      slug: "Valencia4" 	,
+      slug: "Valencia4",
+	  team: "Valencia",
     title: "Valencia 96/97",
     price: "26€",
     description:
@@ -581,7 +632,8 @@ export const products: Product[] = [
     images: ["/products/valencia8.jpg", "/products/Valencia9.jpg", "/products/Valencia10.jpg"],
   },
                 {
-      slug: "Osasuna" 	,
+      slug: "Osasuna",
+	  team: "Osasuna",
     title: "Osasuna 25/26",
     price: "20€",
     description:
@@ -592,7 +644,8 @@ export const products: Product[] = [
     images: ["/products/osasuna.jpg", "/products/osasuna1.jpg", "/products/osasuna13.jpg"],
   },
                  {
-      slug: "Osasuna1" 	,
+      slug: "Osasuna1",
+	  team: "Osasuna",
     title: "Osasuna 00/02",
     price: "26€",
     description:
@@ -603,7 +656,8 @@ export const products: Product[] = [
     images: ["/products/osasuna2.jpg", "/products/osasuna3.jpg", "/products/osasuna13.jpg"],
   },
   {
-      slug: "Osasuna2" 	,
+      slug: "Osasuna2",
+	  team: "Osasuna",
     title: "Osasuna 2005",
     price: "26€",
     description:
