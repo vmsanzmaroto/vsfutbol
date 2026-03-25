@@ -67,7 +67,7 @@ export default function HomePage() {
           </div>
 
           <div className="mt-4 text-sm font-bold text-slate-700">
-            💰Precios sin personalizar las camisetas. Si personalizas 2€ mas. 
+            💰Precios sin personalizar las camisetas. Si personalizas 2€ mas. 🤝Posibilidad de entrega en mano en Madrid🤝
           </div>
         </div>
       </section>
