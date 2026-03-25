@@ -545,7 +545,7 @@ export const products: Product[] = [
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
     badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
-    images: ["/products/villarreal.jpg", "/products/Villarreal1.jpg"],
+    images: ["/products/villarreal.jpg", "/products/villarreal1.jpg"],
   },
                                 {
       slug: "Villarreal1",
@@ -557,7 +557,7 @@ export const products: Product[] = [
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
     badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
-    images: ["/products/villarreal2.jpg", "/products/Villarreal3.jpg"],
+    images: ["/products/villarreal2.jpg", "/products/villarreal3.jpg"],
   },
                                   {
       slug: "Villarreal2",
@@ -569,7 +569,7 @@ export const products: Product[] = [
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
     badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
-    images: ["/products/villarreal4.jpg", "/products/Villarreal5.jpg"],
+    images: ["/products/villarreal4.jpg", "/products/villarreal5.jpg"],
   },
                                 {
       slug: "Valencia",
@@ -581,7 +581,7 @@ export const products: Product[] = [
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
     badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
-    images: ["/products/valencia.jpg", "/products/Valencia1.jpg", "/products/Valencia10.jpg"],
+    images: ["/products/valencia.jpg", "/products/valencia1.jpg", "/products/valencia10.jpg"],
   },
             {
       slug: "Valencia1",
@@ -593,7 +593,7 @@ export const products: Product[] = [
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
     badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
-    images: ["/products/valencia2.jpg", "/products/Valencia3.jpg", "/products/Valencia10.jpg"],
+    images: ["/products/valencia2.jpg", "/products/valencia3.jpg", "/products/valencia10.jpg"],
   },
               {
       slug: "Valencia2",
@@ -605,7 +605,7 @@ export const products: Product[] = [
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
     badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
-    images: ["/products/valencia4.jpg", "/products/Valencia5.jpg", "/products/Valencia10.jpg"],
+    images: ["/products/valencia4.jpg", "/products/valencia5.jpg", "/products/valencia10.jpg"],
   },
               {
       slug: "Valencia3",
@@ -617,7 +617,7 @@ export const products: Product[] = [
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
     badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
-    images: ["/products/valencia6.jpg", "/products/Valencia7.jpg", "/products/Valencia10.jpg"],
+    images: ["/products/valencia6.jpg", "/products/valencia7.jpg", "/products/valencia10.jpg"],
   },
               {
       slug: "Valencia4",
@@ -629,7 +629,7 @@ export const products: Product[] = [
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
     badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
-    images: ["/products/valencia8.jpg", "/products/Valencia9.jpg", "/products/Valencia10.jpg"],
+    images: ["/products/valencia8.jpg", "/products/valencia9.jpg", "/products/valencia10.jpg"],
   },
                 {
       slug: "Osasuna",
