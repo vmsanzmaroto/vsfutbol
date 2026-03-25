@@ -25,7 +25,6 @@ export default function ProductGallery({
   const prev = () => setActive((i) => (i - 1 + images.length) % images.length);
   const next = () => setActive((i) => (i + 1) % images.length);
 
-  // Teclas: ESC cierra, flechas cambian
   useEffect(() => {
     if (!open) return;
 
@@ -40,7 +39,6 @@ export default function ProductGallery({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [open, images.length]);
 
-  // Bloquear scroll cuando el modal está abierto
   useEffect(() => {
     if (!open) return;
     const prevOverflow = document.body.style.overflow;
@@ -53,7 +51,6 @@ export default function ProductGallery({
   return (
     <>
       <div className="relative overflow-hidden rounded-3xl border border-slate-200/60 bg-white/60 p-6 backdrop-blur">
-        {/* IMAGEN GRANDE */}
         <div className="relative h-[420px] overflow-hidden rounded-2xl border border-slate-200/60 bg-gradient-to-b from-white via-slate-50 to-slate-100">
           <Image
             src={main}
@@ -64,14 +61,12 @@ export default function ProductGallery({
             priority
           />
 
-          {/* sombra suave inferior */}
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/10 via-black/0 to-black/0" />
 
-          {/* Badges */}
           <div className="absolute left-5 top-5 flex flex-wrap gap-2">
-            {badges.map((b) => (
+            {badges.map((b, i) => (
               <span
-                key={b.label}
+                key={`${b.label}-${i}`}
                 className={`inline-flex items-center rounded-full bg-gradient-to-r ${b.style} px-3 py-1 text-xs font-extrabold text-white shadow-sm`}
               >
                 {b.label}
@@ -79,7 +74,6 @@ export default function ProductGallery({
             ))}
           </div>
 
-          {/* Botones sobre imagen */}
           <div className="absolute right-4 top-4 flex items-center gap-2">
             <button
               type="button"
@@ -91,7 +85,6 @@ export default function ProductGallery({
             </button>
           </div>
 
-          {/* Flechas (si hay más de 1 imagen) */}
           {images.length > 1 && (
             <>
               <button
@@ -115,7 +108,6 @@ export default function ProductGallery({
             </>
           )}
 
-          {/* Contador */}
           {images.length > 1 && (
             <div className="absolute bottom-3 right-3 rounded-full border border-slate-200 bg-white/90 px-3 py-1 text-xs font-extrabold text-slate-900">
               {active + 1}/{images.length}
@@ -123,11 +115,10 @@ export default function ProductGallery({
           )}
         </div>
 
-        {/* MINIATURAS */}
         <div className="mt-4 grid grid-cols-3 gap-3">
           {images.slice(0, 6).map((src, i) => (
             <button
-              key={src}
+              key={`${src}-${i}`}
               type="button"
               onClick={() => setActive(i)}
               className={[
@@ -155,7 +146,6 @@ export default function ProductGallery({
         </div>
       </div>
 
-      {/* MODAL (pantalla completa) */}
       {open && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4"

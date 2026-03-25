@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import { products } from "../../data/products";
 import { slugify } from "@/lib/slug";
 
@@ -18,10 +19,13 @@ function shuffleArray<T>(array: T[]) {
 }
 
 export default function TiendaPage() {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+
   const [orderedProducts, setOrderedProducts] = useState(products);
-  const [nameQuery, setNameQuery] = useState("");
-  const [sizeFilter, setSizeFilter] = useState("");
-  const [typeFilter, setTypeFilter] = useState("");
+  const [nameQuery, setNameQuery] = useState(searchParams.get("q") ?? "");
+  const [teamFilter, setTeamFilter] = useState(searchParams.get("team") ?? "");
+  const [typeFilter, setTypeFilter] = useState(searchParams.get("type") ?? "");
 
   useEffect(() => {
     const topProducts = products.filter((p) =>
@@ -35,10 +39,10 @@ export default function TiendaPage() {
     setOrderedProducts([...topProducts, ...shuffleArray(normalProducts)]);
   }, []);
 
-  const allSizes = useMemo(() => {
+  const allTeams = useMemo(() => {
     const set = new Set<string>();
     for (const p of orderedProducts) {
-      for (const s of p.sizes) set.add(s);
+      if (p.team) set.add(p.team);
     }
     return Array.from(set).sort();
   }, [orderedProducts]);
@@ -51,6 +55,19 @@ export default function TiendaPage() {
     return Array.from(set).sort();
   }, [orderedProducts]);
 
+  useEffect(() => {
+    const params = new URLSearchParams();
+
+    if (nameQuery.trim()) params.set("q", nameQuery.trim());
+    if (teamFilter) params.set("team", teamFilter);
+    if (typeFilter) params.set("type", typeFilter);
+
+    const queryString = params.toString();
+    router.replace(queryString ? `/tienda?${queryString}` : "/tienda", {
+      scroll: false,
+    });
+  }, [nameQuery, teamFilter, typeFilter, router]);
+
   const filtered = useMemo(() => {
     const q = nameQuery.trim().toLowerCase();
 
@@ -58,16 +75,14 @@ export default function TiendaPage() {
       const haystack = `${p.team} ${p.title} ${p.slug ?? ""}`.toLowerCase();
       const matchName = q === "" || haystack.includes(q);
 
-      const matchSize =
-        sizeFilter === "" ||
-        (p.sizes.includes(sizeFilter) && p.inStockSizes.includes(sizeFilter));
+      const matchTeam = teamFilter === "" || p.team === teamFilter;
 
       const matchType =
         typeFilter === "" || (p.badges || []).some((b) => b.label === typeFilter);
 
-      return matchName && matchSize && matchType;
+      return matchName && matchTeam && matchType;
     });
-  }, [nameQuery, sizeFilter, typeFilter, orderedProducts]);
+  }, [nameQuery, teamFilter, typeFilter, orderedProducts]);
 
   return (
     <main className="space-y-10">
@@ -92,21 +107,21 @@ export default function TiendaPage() {
           </div>
 
           <div className="rounded-2xl border border-slate-200/60 bg-white/70 p-4">
-            <div className="text-xs font-extrabold text-slate-700">Talla</div>
+            <div className="text-xs font-extrabold text-slate-700">Equipo</div>
             <select
-              value={sizeFilter}
-              onChange={(e) => setSizeFilter(e.target.value)}
+              value={teamFilter}
+              onChange={(e) => setTeamFilter(e.target.value)}
               className="mt-2 w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm font-semibold outline-none focus:ring-2 focus:ring-fuchsia-300"
             >
-              <option value="">Todas</option>
-              {allSizes.map((s) => (
-                <option key={s} value={s}>
-                  {s}
+              <option value="">Todos</option>
+              {allTeams.map((team) => (
+                <option key={team} value={team}>
+                  {team}
                 </option>
               ))}
             </select>
             <div className="mt-2 text-[11px] text-slate-500">
-              Solo muestra productos con esa talla disponible.
+              Filtra por equipo.
             </div>
           </div>
 
@@ -136,7 +151,7 @@ export default function TiendaPage() {
               type="button"
               onClick={() => {
                 setNameQuery("");
-                setSizeFilter("");
+                setTeamFilter("");
                 setTypeFilter("");
               }}
               className="mt-3 inline-flex w-full items-center justify-center rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm font-extrabold hover:bg-slate-50"
