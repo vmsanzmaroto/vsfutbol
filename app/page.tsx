@@ -25,8 +25,7 @@ export default function HomePage() {
 
           <p className="mt-4 max-w-2xl text-slate-700">
             Envío rápido en España · Fotos reales · Guía de tallas · Atención directa
-            por WhatsApp. Pregúntanos por cualquier camiseta actual o retro y te
-            indicamos disponibilidad.
+            por WhatsApp. Conseguimos cualquier camiseta actual o retro, solo tiene que preguntarnos.
           </p>
 
           <div className="mt-6 flex flex-wrap gap-4">
@@ -54,12 +53,13 @@ export default function HomePage() {
   <div className="grid gap-4 sm:grid-cols-2">
     <div className="rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 p-4 text-white shadow">
       <p className="text-sm opacity-90">Camiseta temporada actual</p>
-      <p className="text-2xl font-bold">22 €</p>
+      <p className="text-2xl font-bold">20 €</p>
     </div>
+
 
     <div className="rounded-xl bg-gradient-to-r from-purple-600 to-fuchsia-600 p-4 text-white shadow">
       <p className="text-sm opacity-90">Camiseta retro</p>
-      <p className="text-2xl font-bold">28 €</p>
+      <p className="text-2xl font-bold">26 €</p>
     </div>
   </div>
 </div>
@@ -67,8 +67,7 @@ export default function HomePage() {
           </div>
 
           <div className="mt-4 text-sm font-bold text-slate-700">
-            🚚 Envío gratuito a partir de <span className="font-extrabold">75 €</span>. En pedidos inferiores, el coste de envío es de{" "}
-            <span className="font-extrabold">4 €</span>
+            💰Precios sin personalizar las camisetas. Si personalizas 2€ mas. 
           </div>
         </div>
       </section>
@@ -78,15 +77,14 @@ export default function HomePage() {
         <div className="rounded-3xl border border-slate-200/60 bg-white/70 p-6 backdrop-blur">
           <div className="text-sm font-extrabold text-blue-700">Envío</div>
           <p className="mt-2 text-sm text-slate-700">
-            Entrega rápida en España (según zona). Si no está disponible en web,
-            puede tardar más.
+            Entrega rápida en España (según zona). De 15 a 25 días.
           </p>
         </div>
 
         <div className="rounded-3xl border border-slate-200/60 bg-white/70 p-6 backdrop-blur">
           <div className="text-sm font-extrabold text-fuchsia-700">Pago seguro</div>
           <p className="mt-2 text-sm text-slate-700">
-            Métodos de pago fiables: Paypal, bizum o transferencia bancaria.
+            Métodos de pago fiables: Paypal, bizum.
           </p>
         </div>
 

@@ -6,8 +6,8 @@ export default function Navbar() {
       {/* Banner envío */}
       <div className="border-b border-slate-200/50 bg-white/70">
         <div className="mx-auto max-w-7xl px-6 py-2 text-center text-xs font-bold text-slate-700">
-          🚚 Envío gratis desde <span className="text-slate-900">75 €</span> · En pedidos inferiores, envío{" "}
-          <span className="text-slate-900">4 €</span>
+          🚚 Envío gratis desde <span className="text-slate-900">3 piezas €</span> · En pedidos inferiores, envío{" "}
+          <span className="text-slate-900">3 €</span>
         </div>
       </div>
 
@@ -19,12 +19,6 @@ export default function Navbar() {
         </Link>
 
         <nav className="flex items-center gap-2 text-sm">
-          <Link
-            href="/tienda"
-            className="rounded-full px-3 py-2 font-semibold text-slate-700 hover:bg-slate-100 hover:text-slate-900"
-          >
-            Tienda
-          </Link>
           <Link
             href="/faq"
             className="rounded-full px-3 py-2 font-semibold text-slate-700 hover:bg-slate-100 hover:text-slate-900"

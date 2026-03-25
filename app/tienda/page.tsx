@@ -3,51 +3,48 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useMemo, useState } from "react";
-import { products } from "../../data/products";
+import { getRandomProducts } from "../../data/products";
 import { slugify } from "@/lib/slug";
 
-
 export default function TiendaPage() {
+  const randomProducts = useMemo(() => getRandomProducts(), []);
   const [nameQuery, setNameQuery] = useState("");
   const [sizeFilter, setSizeFilter] = useState("");
   const [typeFilter, setTypeFilter] = useState("");
 
   const allSizes = useMemo(() => {
     const set = new Set<string>();
-    for (const p of products) {
+    for (const p of randomProducts) {
       for (const s of p.sizes) set.add(s);
     }
     return Array.from(set);
-  }, []);
+  }, [randomProducts]);
 
   const allTypes = useMemo(() => {
     const set = new Set<string>();
-    for (const p of products) {
+    for (const p of randomProducts) {
       for (const b of p.badges || []) set.add(b.label);
     }
     return Array.from(set);
-  }, []);
+  }, [randomProducts]);
 
   const filtered = useMemo(() => {
     const q = nameQuery.trim().toLowerCase();
 
-    return products.filter((p) => {
-      // Búsqueda por nombre: equipo + título + slug (si existe)
+    return randomProducts.filter((p) => {
       const haystack = `${p.team} ${p.title} ${p.slug ?? ""}`.toLowerCase();
       const matchName = q === "" || haystack.includes(q);
 
-      // Talla disponible (en stock)
       const matchSize =
         sizeFilter === "" ||
         (p.sizes.includes(sizeFilter) && p.inStockSizes.includes(sizeFilter));
 
-      // Tipo (label de badges)
       const matchType =
         typeFilter === "" || (p.badges || []).some((b) => b.label === typeFilter);
 
       return matchName && matchSize && matchType;
     });
-  }, [nameQuery, sizeFilter, typeFilter]);
+  }, [nameQuery, sizeFilter, typeFilter, randomProducts]);
 
   return (
     <main className="space-y-10">
@@ -57,7 +54,6 @@ export default function TiendaPage() {
           Elige tu camiseta y entra para ver detalles. Atención rápida por WhatsApp.
         </p>
 
-        {/* FILTROS */}
         <div className="mt-6 grid gap-3 md:grid-cols-4">
           <div className="rounded-2xl border border-slate-200/60 bg-white/70 p-4">
             <div className="text-xs font-extrabold text-slate-700">Búsqueda por nombre</div>
@@ -73,9 +69,7 @@ export default function TiendaPage() {
           </div>
 
           <div className="rounded-2xl border border-slate-200/60 bg-white/70 p-4">
-            <div className="text-xs font-extrabold text-slate-700">
-              Filtrar por talla (en stock)
-            </div>
+            <div className="text-xs font-extrabold text-slate-700">Talla</div>
             <select
               value={sizeFilter}
               onChange={(e) => setSizeFilter(e.target.value)}
@@ -108,7 +102,7 @@ export default function TiendaPage() {
               ))}
             </select>
             <div className="mt-2 text-[11px] text-slate-500">
-              Se rellena con los labels de tus productos (Top, Nuevo, Selección…).
+              Se rellena con los labels de tus productos.
             </div>
           </div>
 
@@ -130,10 +124,8 @@ export default function TiendaPage() {
         </div>
       </section>
 
-      {/* LISTADO */}
       <section className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {filtered.map((p) => {
-          // ✅ slug limpio SIEMPRE (aunque p.slug tenga espacios, puntos, etc.)
           const cleanSlug = slugify(p.slug ?? `${p.team} ${p.title}`);
 
           return (

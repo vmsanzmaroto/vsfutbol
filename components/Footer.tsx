@@ -17,7 +17,6 @@ export default function Footer() {
         <div className="text-sm">
           <div className="font-semibold">Enlaces</div>
           <ul className="mt-2 space-y-2 text-slate-700">
-            <li><Link href="/tienda" className="hover:underline">Tienda</Link></li>
             <li><Link href="/faq" className="hover:underline">FAQ</Link></li>
             <li><Link href="/contacto" className="hover:underline">Contacto</Link></li>
           </ul>

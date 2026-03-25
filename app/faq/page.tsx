@@ -1,7 +1,7 @@
 const faqs = [
-  { q: "¿Cuánto tarda el envío?", a: "Entre 2-3 días habiles en España (según zona). En caso de no estar disponible en la web en 20-30 días." },
+  { q: "¿Cuánto tarda el envío?", a: "Entrega rápida en España (según zona). De 15 a 25 días." },
   { q: "¿Cómo elijo la talla?", a: "Si dudas entre dos tallas, elige la más grande o pregúntanos por WhatsApp." },
-  { q: "¿Se pueden hacer cambios?", a: "Sí, según nuestra política de cambios y devoluciones." },
+  { q: "¿Se pueden hacer cambios?", a: "Sí, según nuestra política de cambios y devoluciones.En caso de personalización no hay derecho a devolución" }, 
 ];
 
 export default function FaqPage() {
