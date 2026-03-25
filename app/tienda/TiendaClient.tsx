@@ -24,8 +24,6 @@ export default function TiendaClient() {
 
   const [orderedProducts, setOrderedProducts] = useState(products);
   const [nameQuery, setNameQuery] = useState("");
-  const [teamFilter, setTeamFilter] = useState("");
-  const [typeFilter, setTypeFilter] = useState("");
 
   useEffect(() => {
     const topProducts = products.filter((p) =>
@@ -39,11 +37,13 @@ export default function TiendaClient() {
     setOrderedProducts([...topProducts, ...shuffleArray(normalProducts)]);
   }, []);
 
+  // Solo sincronizamos el input de texto con la URL
   useEffect(() => {
     setNameQuery(searchParams.get("q") ?? "");
-    setTeamFilter(searchParams.get("team") ?? "");
-    setTypeFilter(searchParams.get("type") ?? "");
   }, [searchParams]);
+
+  const teamFilter = searchParams.get("team") ?? "";
+  const typeFilter = searchParams.get("type") ?? "";
 
   const allTeams = useMemo(() => {
     const set = new Set<string>();
@@ -61,36 +61,45 @@ export default function TiendaClient() {
     return Array.from(set).sort();
   }, [orderedProducts]);
 
-  useEffect(() => {
-    const currentQ = searchParams.get("q") ?? "";
-    const currentTeam = searchParams.get("team") ?? "";
-    const currentType = searchParams.get("type") ?? "";
+  function updateFilters(next: {
+    q?: string;
+    team?: string;
+    type?: string;
+  }) {
+    const params = new URLSearchParams(searchParams.toString());
 
-    if (
-      nameQuery === currentQ &&
-      teamFilter === currentTeam &&
-      typeFilter === currentType
-    ) {
-      return;
+    const q = next.q ?? (params.get("q") ?? "");
+    const team = next.team ?? (params.get("team") ?? "");
+    const type = next.type ?? (params.get("type") ?? "");
+
+    if (q.trim()) {
+      params.set("q", q.trim());
+    } else {
+      params.delete("q");
     }
 
-    const params = new URLSearchParams();
+    if (team) {
+      params.set("team", team);
+    } else {
+      params.delete("team");
+    }
 
-    if (nameQuery.trim()) params.set("q", nameQuery.trim());
-    if (teamFilter) params.set("team", teamFilter);
-    if (typeFilter) params.set("type", typeFilter);
+    if (type) {
+      params.set("type", type);
+    } else {
+      params.delete("type");
+    }
 
-    const queryString = params.toString();
-    router.replace(queryString ? `/tienda?${queryString}` : "/tienda", {
-      scroll: false,
-    });
-  }, [nameQuery, teamFilter, typeFilter, router, searchParams]);
+    const qs = params.toString();
+    router.replace(qs ? `/tienda?${qs}` : "/tienda", { scroll: false });
+  }
 
   const filtered = useMemo(() => {
     const q = nameQuery.trim().toLowerCase();
 
     return orderedProducts.filter((p) => {
       const haystack = `${p.team} ${p.title} ${p.slug ?? ""}`.toLowerCase();
+
       const matchName = q === "" || haystack.includes(q);
       const matchTeam = teamFilter === "" || p.team === teamFilter;
       const matchType =
@@ -98,7 +107,7 @@ export default function TiendaClient() {
 
       return matchName && matchTeam && matchType;
     });
-  }, [nameQuery, teamFilter, typeFilter, orderedProducts]);
+  }, [orderedProducts, nameQuery, teamFilter, typeFilter]);
 
   return (
     <main className="space-y-10">
@@ -113,7 +122,11 @@ export default function TiendaClient() {
             <div className="text-xs font-extrabold text-slate-700">Búsqueda por nombre</div>
             <input
               value={nameQuery}
-              onChange={(e) => setNameQuery(e.target.value)}
+              onChange={(e) => {
+                const value = e.target.value;
+                setNameQuery(value);
+                updateFilters({ q: value });
+              }}
               placeholder="Ej: madrid, betis, españa, 24/25..."
               className="mt-2 w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm font-semibold outline-none focus:ring-2 focus:ring-fuchsia-300"
             />
@@ -126,7 +139,7 @@ export default function TiendaClient() {
             <div className="text-xs font-extrabold text-slate-700">Equipo</div>
             <select
               value={teamFilter}
-              onChange={(e) => setTeamFilter(e.target.value)}
+              onChange={(e) => updateFilters({ team: e.target.value })}
               className="mt-2 w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm font-semibold outline-none focus:ring-2 focus:ring-fuchsia-300"
             >
               <option value="">Todos</option>
@@ -145,7 +158,7 @@ export default function TiendaClient() {
             <div className="text-xs font-extrabold text-slate-700">Tipo</div>
             <select
               value={typeFilter}
-              onChange={(e) => setTypeFilter(e.target.value)}
+              onChange={(e) => updateFilters({ type: e.target.value })}
               className="mt-2 w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm font-semibold outline-none focus:ring-2 focus:ring-fuchsia-300"
             >
               <option value="">Todos</option>
@@ -167,8 +180,7 @@ export default function TiendaClient() {
               type="button"
               onClick={() => {
                 setNameQuery("");
-                setTeamFilter("");
-                setTypeFilter("");
+                router.replace("/tienda", { scroll: false });
               }}
               className="mt-3 inline-flex w-full items-center justify-center rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm font-extrabold hover:bg-slate-50"
             >
