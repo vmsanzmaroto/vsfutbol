@@ -40,8 +40,8 @@ export const products: Product[] = [
       "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
-    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
-    images: ["/products/realmadridretro.jpg", "/products/realmadridretro2.jpg", "/products/madrid13.jpg", "/products/madrid14.jpg", "/products/madrid15.jpg", "/products/madrid16.jpg", "/products/madrid17.jpg"],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
+    images: ["/products/realmadridLaliga.jpg", "/products/realmadridLaliga2.jpg", "/products/madrid13.jpg", "/products/madrid14.jpg", "/products/madrid15.jpg", "/products/madrid16.jpg", "/products/madrid17.jpg"],
   },
     {
     slug: "Madrid2",
@@ -52,7 +52,7 @@ export const products: Product[] = [
       "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
-    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
     images: ["/products/rm3.jpg", "/products/realmadrid4.jpg", "/products/madrid13.jpg", "/products/madrid14.jpg", "/products/madrid15.jpg", "/products/madrid16.jpg", "/products/madrid17.jpg"],
   },
      {
@@ -64,7 +64,7 @@ export const products: Product[] = [
       "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
-    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
     images: ["/products/madrid1.jpg", "/products/madrid2.jpg", "/products/madrid13.jpg", "/products/madrid14.jpg", "/products/madrid15.jpg", "/products/madrid16.jpg", "/products/madrid17.jpg"],
   },
        {
@@ -76,7 +76,7 @@ export const products: Product[] = [
       "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
-    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
     images: ["/products/madrid3.jpg", "/products/madrid4.jpg", "/products/madrid13.jpg", "/products/madrid14.jpg", "/products/madrid15.jpg", "/products/madrid16.jpg", "/products/madrid17.jpg"],
   },
          {
@@ -88,7 +88,7 @@ export const products: Product[] = [
       "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
-    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
     images: ["/products/madrid5.jpg", "/products/madrid6.jpg", "/products/madrid13.jpg", "/products/madrid14.jpg", "/products/madrid15.jpg", "/products/madrid16.jpg", "/products/madrid17.jpg"],
   },
           {
@@ -100,7 +100,7 @@ export const products: Product[] = [
       "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
-    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
     images: ["/products/atleti1.jpg", "/products/atleti2.jpg", "/products/atleti13.jpg"],
   },
             {
@@ -112,7 +112,7 @@ export const products: Product[] = [
       "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
-    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
     images: ["/products/atleti3.jpg", "/products/atleti4.jpg", "/products/atleti13.jpg"],
   },
               {
@@ -124,7 +124,7 @@ export const products: Product[] = [
       "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
-    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
     images: ["/products/atleti5.jpg", "/products/atleti6.jpg", "/products/atleti13.jpg"],
   },
   {
@@ -148,7 +148,7 @@ export const products: Product[] = [
       "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
-    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
     images: ["/products/atleti9.jpg", "/products/atleti10.jpg", "/products/atleti13.jpg"],
   }, 
   {
@@ -160,7 +160,7 @@ export const products: Product[] = [
       "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
-    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
     images: ["/products/atleti11.jpg", "/products/atleti11.jpg", "/products/atleti13.jpg"],
   }, 
   {
@@ -184,7 +184,7 @@ export const products: Product[] = [
       "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
-    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
     images: ["/products/barsa2.jpg", "/products/barsa3.jpg", "/products/barsa14.jpg", "/products/barsa15.jpg", "/products/barsa16.jpg"],
   },  
       {
@@ -196,7 +196,7 @@ export const products: Product[] = [
       "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
-    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
     images: ["/products/barsa4.jpg", "/products/barsa5.jpg", "/products/barsa14.jpg", "/products/barsa15.jpg", "/products/barsa16.jpg"],
   },  
         {
@@ -208,7 +208,7 @@ export const products: Product[] = [
       "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
-    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
     images: ["/products/barsa6.jpg", "/products/barsa7.jpg", "/products/barsa14.jpg", "/products/barsa15.jpg", "/products/barsa16.jpg"],
   }, 
           {
@@ -220,7 +220,7 @@ export const products: Product[] = [
       "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
-    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
     images: ["/products/barsa8.jpg", "/products/barsa9.jpg", "/products/barsa14.jpg", "/products/barsa15.jpg", "/products/barsa16.jpg"],
   }, 
             {
@@ -232,7 +232,7 @@ export const products: Product[] = [
       "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
-    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
     images: ["/products/barsa10.jpg", "/products/barsa11.jpg", "/products/barsa14.jpg", "/products/barsa15.jpg", "/products/barsa16.jpg"],
   }, 
               {
@@ -256,7 +256,7 @@ export const products: Product[] = [
       "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
-    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
     images: ["/products/bilbao2.jpg", "/products/bilbao3.jpg"],
   }, 
                 {
@@ -268,7 +268,7 @@ export const products: Product[] = [
       "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
-    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
     images: ["/products/bilbao4.jpg", "/products/bilbao5.jpg"],
   },
                   {
@@ -280,7 +280,7 @@ export const products: Product[] = [
       "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
-    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
     images: ["/products/bilbao6.jpg", "/products/bilbao7.jpg"],
   },
                     {
@@ -292,7 +292,7 @@ export const products: Product[] = [
       "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
-    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
     images: ["/products/bilbao8.jpg", "/products/bilbao9.jpg"],
   },
                       {
@@ -304,7 +304,7 @@ export const products: Product[] = [
       "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
-    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
     images: ["/products/bilbao10.jpg", "/products/bilbao11.jpg"],
   },
   {
@@ -328,7 +328,7 @@ export const products: Product[] = [
       "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
-    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
     images: ["/products/rs2.jpg", "/products/rs3.jpg"],
   }, 
    {
@@ -340,7 +340,7 @@ export const products: Product[] = [
       "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
-    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
     images: ["/products/rs4.jpg", "/products/rs5.jpg"],
   }, 
      {
@@ -352,7 +352,7 @@ export const products: Product[] = [
       "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
-    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
     images: ["/products/rs6.jpg", "/products/rs7.jpg"],
   }, 
       {
@@ -364,7 +364,7 @@ export const products: Product[] = [
       "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
-    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
     images: ["/products/rs8.jpg", "/products/rs9.jpg"],
   }, 
       {
@@ -376,7 +376,7 @@ export const products: Product[] = [
       "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
-    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
     images: ["/products/rs10.jpg", "/products/rs11.jpg"],
   }, 
         {
@@ -400,7 +400,7 @@ export const products: Product[] = [
       "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
-    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
     images: ["/products/betis2.jpg", "/products/betis3.jpg"],
   }, 
             {
@@ -412,7 +412,7 @@ export const products: Product[] = [
       "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
-    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
     images: ["/products/betis4.jpg", "/products/betis5.jpg"],
   }, 
               {
@@ -424,7 +424,7 @@ export const products: Product[] = [
       "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
-    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
     images: ["/products/betis6.jpg", "/products/betis7.jpg"],
   }, 
                {
@@ -436,7 +436,7 @@ export const products: Product[] = [
       "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
-    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
     images: ["/products/betis8.jpg", "/products/betis9.jpg"],
   }, 
                  {
@@ -448,7 +448,7 @@ export const products: Product[] = [
       "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
-    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
     images: ["/products/betis10.jpg", "/products/betis11.jpg"],
   },
 		{
@@ -472,7 +472,7 @@ export const products: Product[] = [
       "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
-    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
     images: ["/products/celta2.jpg", "/products/celta3.jpg"],
   },
                      {
@@ -484,7 +484,7 @@ export const products: Product[] = [
       "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
-    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
     images: ["/products/celta4.jpg", "/products/celta5.jpg"],
   },
                        {
@@ -496,7 +496,7 @@ export const products: Product[] = [
       "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
-    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
     images: ["/products/celta6.jpg", "/products/celta7.jpg"],
   },
                         {
@@ -508,7 +508,7 @@ export const products: Product[] = [
       "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
-    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
     images: ["/products/celta8.jpg", "/products/celta9.jpg"],
   },
                           {
@@ -568,7 +568,7 @@ export const products: Product[] = [
       "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
-    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
     images: ["/products/villarreal4.jpg", "/products/villarreal5.jpg"],
   },
                                 {
@@ -592,7 +592,7 @@ export const products: Product[] = [
       "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
-    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
     images: ["/products/valencia2.jpg", "/products/valencia3.jpg", "/products/valencia10.jpg"],
   },
               {
@@ -604,7 +604,7 @@ export const products: Product[] = [
       "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
-    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
     images: ["/products/valencia4.jpg", "/products/valencia5.jpg", "/products/valencia10.jpg"],
   },
               {
@@ -616,7 +616,7 @@ export const products: Product[] = [
       "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
-    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
     images: ["/products/valencia6.jpg", "/products/valencia7.jpg", "/products/valencia10.jpg"],
   },
               {
@@ -628,7 +628,7 @@ export const products: Product[] = [
       "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
-    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
     images: ["/products/valencia8.jpg", "/products/valencia9.jpg", "/products/valencia10.jpg"],
   },
                 {
@@ -652,7 +652,7 @@ export const products: Product[] = [
       "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
-    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
     images: ["/products/osasuna2.jpg", "/products/osasuna3.jpg", "/products/osasuna13.jpg"],
   },
   {
@@ -664,7 +664,7 @@ export const products: Product[] = [
       "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
-    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
     images: ["/products/osasuna4.jpg", "/products/osasuna5.jpg", "/products/osasuna13.jpg"],
   },
     {
@@ -688,7 +688,7 @@ export const products: Product[] = [
       "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
-    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
     images: ["/products/sevilla2.jpg", "/products/sevilla3.jpg", "/products/sevilla12.jpg"],
   },
         {
@@ -712,7 +712,7 @@ export const products: Product[] = [
       "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
-    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
     images: ["/products/rayo2.jpg", "/products/rayo3.jpg", "/products/rayo10.jpg"],
   },
             {
@@ -724,7 +724,7 @@ export const products: Product[] = [
       "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
-    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
     images: ["/products/rayo4.jpg", "/products/rayo5.jpg", "/products/rayo10.jpg"],
   },
               {
@@ -736,7 +736,7 @@ export const products: Product[] = [
       "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
-    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
     images: ["/products/rayo6.jpg", "/products/rayo7.jpg", "/products/rayo10.jpg"],
   },
                 {
@@ -748,7 +748,7 @@ export const products: Product[] = [
       "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
-    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
     images: ["/products/rayo8.jpg", "/products/rayo9.jpg", "/products/rayo10.jpg"],
   },
                   {
@@ -772,7 +772,7 @@ export const products: Product[] = [
       "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
-    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
     images: ["/products/laspalmas2.jpg", "/products/laspalmas3.jpg", "/products/laspalmas6.jpg"],
   },
                       {
@@ -784,7 +784,7 @@ export const products: Product[] = [
       "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
-    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
     images: ["/products/laspalmas4.jpg", "/products/laspalmas5.jpg", "/products/laspalmas6.jpg"],
   },
                         {
@@ -808,7 +808,7 @@ export const products: Product[] = [
       "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
-    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
     images: ["/products/alaves2.jpg", "/products/alaves3.jpg", "/products/alaves6.jpg"],
   },
                             {
@@ -820,7 +820,7 @@ export const products: Product[] = [
       "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
-    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
     images: ["/products/alaves4.jpg", "/products/alaves5.jpg", "/products/alaves6.jpg"],
   },
                               {
@@ -868,7 +868,7 @@ export const products: Product[] = [
       "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
-    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
     images: ["/products/deportivo2.jpg", "/products/deportivo3.jpg", "/products/deportivo10.jpg"],
   },
                                       {
@@ -880,7 +880,7 @@ export const products: Product[] = [
       "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
-    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
     images: ["/products/deportivo4.jpg", "/products/deportivo5.jpg", "/products/deportivo10.jpg"],
   },
                                       {
@@ -892,7 +892,7 @@ export const products: Product[] = [
       "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
-    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
     images: ["/products/deportivo6.jpg", "/products/deportivo7.jpg", "/products/deportivo10.jpg"],
   },
                                       {
@@ -904,7 +904,7 @@ export const products: Product[] = [
       "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
-    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
     images: ["/products/deportivo8.jpg", "/products/deportivo9.jpg", "/products/deportivo10.jpg"],
   },
                                         {
@@ -928,7 +928,7 @@ export const products: Product[] = [
       "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
-    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
     images: ["/products/getafe.jpg", "/products/getafe1.jpg", "/products/getafe2.jpg"],
   },
     {
@@ -952,7 +952,7 @@ export const products: Product[] = [
       "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
-    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
     images: ["/products/malaga2.jpg", "/products/malaga3.jpg", "/products/malaga6.jpg"],
   },
         {
@@ -964,7 +964,7 @@ export const products: Product[] = [
       "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
-    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
     images: ["/products/malaga4.jpg", "/products/malaga5.jpg", "/products/malaga6.jpg"],
   },
       {
@@ -1012,7 +1012,7 @@ export const products: Product[] = [
       "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
-    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
     images: ["/products/valladolid2.jpg", "/products/valladolid3.jpg", "/products/valladolid8.jpg"],
   },
           {
@@ -1024,7 +1024,7 @@ export const products: Product[] = [
       "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
-    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
     images: ["/products/valladolid4.jpg", "/products/valladolid5.jpg", "/products/valladolid8.jpg"],
   },
             {
@@ -1036,7 +1036,7 @@ export const products: Product[] = [
       "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
     sizes: ["S", "M", "L", "XL"],
     inStockSizes: ["S", "M", "L", "XL"],
-    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
     images: ["/products/valladolid6.jpg", "/products/valladolid7.jpg", "/products/valladolid8.jpg"],
   },
               {
