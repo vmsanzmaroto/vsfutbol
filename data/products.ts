@@ -236,8 +236,8 @@ export const products: Product[] = [
     images: ["/products/barsa10.jpg", "/products/barsa11.jpg", "/products/barsa14.jpg", "/products/barsa15.jpg", "/products/barsa16.jpg"],
   }, 
               {
-    slug: "bilbao",
-	team: "bilbao",
+    slug: "Bilbao",
+	team: "Bilbao",
     title: "Athletic Bilbao 25/26",
     price: "20€",
     description:
@@ -249,7 +249,7 @@ export const products: Product[] = [
   }, 
                 {
     slug: "bilbao1",
-	team: "bilbao",
+	team: "Bilbao",
     title: "Athletic Bilbao 100 aniversario",
     price: "26€",
     description:
@@ -261,7 +261,7 @@ export const products: Product[] = [
   }, 
                 {
     slug: "bilbao2",
-	team: "bilbao",
+	team: "Bilbao",
     title: "Athletic Bilbao 97/98",
     price: "26€",
     description:
@@ -273,7 +273,7 @@ export const products: Product[] = [
   },
                   {
     slug: "bilbao3",
-	team: "bilbao",
+	team: "Bilbao",
     title: "Athletic Bilbao 11/12",
     price: "26€",
     description:
@@ -285,7 +285,7 @@ export const products: Product[] = [
   },
                     {
     slug: "bilbao4",
-	team: "bilbao",
+	team: "Bilbao",
     title: "Athletic Bilbao 97/98",
     price: "26€",
     description:
@@ -297,7 +297,7 @@ export const products: Product[] = [
   },
                       {
     slug: "bilbao5",
-	team: "bilbao",
+	team: "Bilbao",
     title: "Athletic Bilbao 94/95",
     price: "26€",
     description:
@@ -753,7 +753,7 @@ export const products: Product[] = [
   },
                   {
       slug: "Las Palmas",
-	  team: "Las Palmas -",
+	  team: "Las Palmas",
     title: "Las Palmas 25/26",
     price: "20€",
     description:
@@ -765,7 +765,7 @@ export const products: Product[] = [
   },
                     {
       slug: "Las Palmas1",
-	  team: "Las Palmas -",
+	  team: "Las Palmas",
     title: "Las Palmas 00/01",
     price: "26€",
     description:
@@ -777,7 +777,7 @@ export const products: Product[] = [
   },
                       {
       slug: "Las Palmas2",
-	  team: "Las Palmas -",
+	  team: "Las Palmas",
     title: "Las Palmas 95/96",
     price: "26€",
     description:
@@ -786,6 +786,282 @@ export const products: Product[] = [
     inStockSizes: ["S", "M", "L", "XL"],
     badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
     images: ["/products/laspalmas4.jpg", "/products/laspalmas5.jpg", "/products/laspalmas6.jpg"],
+  },
+                        {
+      slug: "Alaves",
+	  team: "Alaves",
+    title: "Alaves 25/26",
+    price: "20€",
+    description:
+      "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
+    sizes: ["S", "M", "L", "XL"],
+    inStockSizes: ["S", "M", "L", "XL"],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
+    images: ["/products/alaves.jpg", "/products/alaves1.jpg", "/products/alaves6.jpg"],
+  },
+                          {
+      slug: "Alaves1",
+	  team: "Alaves",
+    title: "Alaves 00/01",
+    price: "26€",
+    description:
+      "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
+    sizes: ["S", "M", "L", "XL"],
+    inStockSizes: ["S", "M", "L", "XL"],
+    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    images: ["/products/alaves2.jpg", "/products/alaves3.jpg", "/products/alaves6.jpg"],
+  },
+                            {
+      slug: "Alaves2",
+	  team: "Alaves",
+    title: "Alaves 00/01",
+    price: "26€",
+    description:
+      "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
+    sizes: ["S", "M", "L", "XL"],
+    inStockSizes: ["S", "M", "L", "XL"],
+    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    images: ["/products/alaves4.jpg", "/products/alaves5.jpg", "/products/alaves6.jpg"],
+  },
+                              {
+      slug: "Zaragoza",
+	  team: "Zaragoza",
+    title: "Zaragoza 25/26",
+    price: "20€",
+    description:
+      "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
+    sizes: ["S", "M", "L", "XL"],
+    inStockSizes: ["S", "M", "L", "XL"],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
+    images: ["/products/zaragoza.jpg", "/products/zaragoza1.jpg"],
+  },
+                                {
+      slug: "Cadiz",
+	  team: "Cadiz",
+    title: "Cadiz 25/26",
+    price: "20€",
+    description:
+      "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
+    sizes: ["S", "M", "L", "XL"],
+    inStockSizes: ["S", "M", "L", "XL"],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
+    images: ["/products/cadiz.jpg", "/products/cadiz1.jpg", "/products/cadiz2.jpg"],
+  },
+                                  {
+      slug: "Deportivo",
+	  team: "Deportivo De La Coruña",
+    title: "Deportivo De La Coruña 25/26",
+    price: "20€",
+    description:
+      "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
+    sizes: ["S", "M", "L", "XL"],
+    inStockSizes: ["S", "M", "L", "XL"],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
+    images: ["/products/deportivo.jpg", "/products/deportivo1.jpg", "/products/deportivo10.jpg"],
+  },
+                                    {
+      slug: "Deportivo1",
+	  team: "Deportivo De La Coruña",
+    title: "Deportivo De La Coruña 98/99",
+    price: "26€",
+    description:
+      "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
+    sizes: ["S", "M", "L", "XL"],
+    inStockSizes: ["S", "M", "L", "XL"],
+    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    images: ["/products/deportivo2.jpg", "/products/deportivo3.jpg", "/products/deportivo10.jpg"],
+  },
+                                      {
+      slug: "Deportivo2",
+	  team: "Deportivo De La Coruña",
+    title: "Deportivo De La Coruña 99/00",
+    price: "26€",
+    description:
+      "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
+    sizes: ["S", "M", "L", "XL"],
+    inStockSizes: ["S", "M", "L", "XL"],
+    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    images: ["/products/deportivo4.jpg", "/products/deportivo5.jpg", "/products/deportivo10.jpg"],
+  },
+                                      {
+      slug: "Deportivo3",
+	  team: "Deportivo De La Coruña",
+    title: "Deportivo De La Coruña 98/99",
+    price: "26€",
+    description:
+      "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
+    sizes: ["S", "M", "L", "XL"],
+    inStockSizes: ["S", "M", "L", "XL"],
+    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    images: ["/products/deportivo6.jpg", "/products/deportivo7.jpg", "/products/deportivo10.jpg"],
+  },
+                                      {
+      slug: "Deportivo4",
+	  team: "Deportivo De La Coruña",
+    title: "Deportivo De La Coruña 98/99",
+    price: "26€",
+    description:
+      "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
+    sizes: ["S", "M", "L", "XL"],
+    inStockSizes: ["S", "M", "L", "XL"],
+    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    images: ["/products/deportivo8.jpg", "/products/deportivo9.jpg", "/products/deportivo10.jpg"],
+  },
+                                        {
+      slug: "Espanyol",
+	  team: "Espanyol",
+    title: "Espanyol 25/26",
+    price: "20€",
+    description:
+      "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
+    sizes: ["S", "M", "L", "XL"],
+    inStockSizes: ["S", "M", "L", "XL"],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
+    images: ["/products/español.jpg", "/products/español1.jpg", "/products/español2.jpg"],
+  },
+  {
+      slug: "Getafe",
+	  team: "Getafe",
+    title: "Getafe 98/99",
+    price: "26€",
+    description:
+      "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
+    sizes: ["S", "M", "L", "XL"],
+    inStockSizes: ["S", "M", "L", "XL"],
+    badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
+    images: ["/products/getafe.jpg", "/products/getafe1.jpg", "/products/getafe2.jpg"],
+  },
+    {
+      slug: "España",
+	  team: "España",
+    title: "España 25/26",
+    price: "20€",
+    description:
+      "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
+    sizes: ["S", "M", "L", "XL"],
+    inStockSizes: ["S", "M", "L", "XL"],
+    badges: [{ label: "Selecciones", style: "from-blue-600 to-fuchsia-600" }],
+    images: ["/products/españa.jpg", "/products/españa2.jpg"],
+  },
+      {
+      slug: "España1",
+	  team: "España",
+    title: "España 25/26",
+    price: "20€",
+    description:
+      "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
+    sizes: ["S", "M", "L", "XL"],
+    inStockSizes: ["S", "M", "L", "XL"],
+    badges: [{ label: "Selecciones", style: "from-blue-600 to-fuchsia-600" }],
+    images: ["/products/españa3.jpg", "/products/españa4.jpg"],
+  },
+    {
+      slug: "Argentina",
+	  team: "Argentina",
+    title: "Argentina 25/26",
+    price: "20€",
+    description:
+      "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
+    sizes: ["S", "M", "L", "XL"],
+    inStockSizes: ["S", "M", "L", "XL"],
+    badges: [{ label: "Selecciones", style: "from-blue-600 to-fuchsia-600" }],
+    images: ["/products/argentina.jpg", "/products/argentina1.jpg"],
+  },
+    {
+      slug: "Argentina1",
+	  team: "Argentina",
+    title: "Argentina 25/26",
+    price: "20€",
+    description:
+      "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
+    sizes: ["S", "M", "L", "XL"],
+    inStockSizes: ["S", "M", "L", "XL"],
+    badges: [{ label: "Selecciones", style: "from-blue-600 to-fuchsia-600" }],
+    images: ["/products/argentina2.jpg", "/products/argentina3.jpg"],
+  },
+      {
+      slug: "Brasil",
+	  team: "Brasil",
+    title: "Brasil 25/26",
+    price: "20€",
+    description:
+      "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
+    sizes: ["S", "M", "L", "XL"],
+    inStockSizes: ["S", "M", "L", "XL"],
+    badges: [{ label: "Selecciones", style: "from-blue-600 to-fuchsia-600" }],
+    images: ["/products/brasil.jpg", "/products/brasil1.jpg"],
+  },
+        {
+      slug: "Brasil1",
+	  team: "Brasil",
+    title: "Brasil 25/26",
+    price: "20€",
+    description:
+      "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
+    sizes: ["S", "M", "L", "XL"],
+    inStockSizes: ["S", "M", "L", "XL"],
+    badges: [{ label: "Selecciones", style: "from-blue-600 to-fuchsia-600" }],
+    images: ["/products/brasil2.jpg", "/products/brasil3.jpg"],
+  },
+          {
+      slug: "Portugal",
+	  team: "Portugal",
+    title: "Portugal 25/26",
+    price: "20€",
+    description:
+      "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
+    sizes: ["S", "M", "L", "XL"],
+    inStockSizes: ["S", "M", "L", "XL"],
+    badges: [{ label: "Selecciones", style: "from-blue-600 to-fuchsia-600" }],
+    images: ["/products/portugal.jpg", "/products/portugal1.jpg"],
+  },
+            {
+      slug: "Portugal",
+	  team: "Portugal",
+    title: "Portugal 25/26",
+    price: "20€",
+    description:
+      "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
+    sizes: ["S", "M", "L", "XL"],
+    inStockSizes: ["S", "M", "L", "XL"],
+    badges: [{ label: "Selecciones", style: "from-blue-600 to-fuchsia-600" }],
+    images: ["/products/portugal2.jpg", "/products/portugal3.jpg"],
+  },
+   {
+      slug: "Italia",
+	  team: "Italia",
+    title: "Italia 25/26",
+    price: "20€",
+    description:
+      "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
+    sizes: ["S", "M", "L", "XL"],
+    inStockSizes: ["S", "M", "L", "XL"],
+    badges: [{ label: "Selecciones", style: "from-blue-600 to-fuchsia-600" }],
+    images: ["/products/italia.jpg", "/products/italia1.jpg"],
+  },
+     {
+      slug: "Italia",
+	  team: "Italia",
+    title: "Italia 25/26",
+    price: "20€",
+    description:
+      "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
+    sizes: ["S", "M", "L", "XL"],
+    inStockSizes: ["S", "M", "L", "XL"],
+    badges: [{ label: "Selecciones", style: "from-blue-600 to-fuchsia-600" }],
+    images: ["/products/italia2.jpg", "/products/italia3.jpg"],
+  },
+       {
+      slug: "Francia",
+	  team: "Francia",
+    title: "Francia 25/26",
+    price: "20€",
+    description:
+      "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
+    sizes: ["S", "M", "L", "XL"],
+    inStockSizes: ["S", "M", "L", "XL"],
+    badges: [{ label: "Selecciones", style: "from-blue-600 to-fuchsia-600" }],
+    images: ["/products/francia.jpg", "/products/francia1.jpg"],
   },
 ];
 
