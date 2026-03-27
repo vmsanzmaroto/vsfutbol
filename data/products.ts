@@ -1039,6 +1039,30 @@ export const products: Product[] = [
     badges: [{ label: "Retro", style: "from-blue-600 to-fuchsia-600" }],
     images: ["/products/valladolid6.jpg", "/products/valladolid7.jpg", "/products/valladolid8.jpg"],
   },
+              {
+      slug: "Mallorca",
+	  team: "Mallorca",
+    title: "Mallorca 25/26",
+    price: "20€",
+    description:
+      "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
+    sizes: ["S", "M", "L", "XL"],
+    inStockSizes: ["S", "M", "L", "XL"],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
+    images: ["/products/mallorca.jpg", "/products/mallorca1.jpg", "/products/mallorca2.jpg"],
+  },
+                {
+      slug: "Racing de Santander",
+	  team: "Racing de Santander",
+    title: "Racing de Santander 25/26, 112 th",
+    price: "20€",
+    description:
+      "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
+    sizes: ["S", "M", "L", "XL"],
+    inStockSizes: ["S", "M", "L", "XL"],
+    badges: [{ label: "Laliga", style: "from-blue-600 to-fuchsia-600" }],
+    images: ["/products/racing.jpg", "/products/racing1.jpg", "/products/racing2.jpg"],
+  },
     {
       slug: "España",
 	  team: "España",
@@ -1062,6 +1086,30 @@ export const products: Product[] = [
     inStockSizes: ["S", "M", "L", "XL"],
     badges: [{ label: "Selecciones", style: "from-blue-600 to-fuchsia-600" }],
     images: ["/products/españa3.jpg", "/products/españa4.jpg"],
+  },
+        {
+      slug: "España2",
+	  team: "España",
+    title: "España 11/12",
+    price: "26€",
+    description:
+      "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
+    sizes: ["S", "M", "L", "XL"],
+    inStockSizes: ["S", "M", "L", "XL"],
+    badges: [{ label: "Selecciones", style: "from-blue-600 to-fuchsia-600" }],
+    images: ["/products/españa5.jpg", "/products/españa6.jpg"],
+  },
+          {
+      slug: "España3",
+	  team: "España",
+    title: "España 1996",
+    price: "26€",
+    description:
+      "Camiseta de alta calidad con tejido transpirable y excelente acabado. Ideal para partido o uso diario.",
+    sizes: ["S", "M", "L", "XL"],
+    inStockSizes: ["S", "M", "L", "XL"],
+    badges: [{ label: "Selecciones", style: "from-blue-600 to-fuchsia-600" }],
+    images: ["/products/españa7.jpg", "/products/españa8.jpg"],
   },
     {
       slug: "Argentina",
