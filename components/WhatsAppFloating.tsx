@@ -1,6 +1,6 @@
 export default function WhatsAppFloating() {
   const wa =
-    "https://wa.me/34666163082?text=Hola!%20Estoy%20interesado%20en%20una%20camiseta.%20%C2%BFMe%20ayudas%20con%20tallas%20y%20modelos%3F";
+    "https://wa.me/34611190195?text=Hola!%20Estoy%20interesado%20en%20una%20camiseta.%20%C2%BFMe%20ayudas%20con%20tallas%20y%20modelos%3F";
 
   return (
     <a

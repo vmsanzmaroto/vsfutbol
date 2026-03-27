@@ -37,7 +37,7 @@ export default function HomePage() {
             </Link>
 
             <a
-              href="https://wa.me/34666163082?text=Hola!%20Quiero%20ver%20las%20camisetas"
+              href="https://wa.me/34611190195?text=Hola!%20Quiero%20ver%20las%20camisetas"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white/90 px-8 py-4 text-base font-extrabold hover:bg-white"

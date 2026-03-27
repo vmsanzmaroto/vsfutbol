@@ -1,6 +1,6 @@
 export default function ContactoPage() {
   const wa =
-    "https://wa.me/34666163082?text=Hola!%20Quiero%20info%20sobre%20tallas%20y%20modelos.";
+    "https://wa.me/34611190195c?text=Hola!%20Quiero%20info%20sobre%20tallas%20y%20modelos.";
 
   return (
     <main className="space-y-4">
