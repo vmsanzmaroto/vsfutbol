@@ -23,7 +23,11 @@ export default function TiendaClient() {
   const searchParams = useSearchParams();
 
   const [orderedProducts, setOrderedProducts] = useState(products);
+
   const [nameQuery, setNameQuery] = useState("");
+  const [teamFilter, setTeamFilter] = useState("");
+  const [typeFilter, setTypeFilter] = useState("");
+  const [initialized, setInitialized] = useState(false);
 
   useEffect(() => {
     const topProducts = products.filter((p) =>
@@ -37,62 +41,45 @@ export default function TiendaClient() {
     setOrderedProducts([...topProducts, ...shuffleArray(normalProducts)]);
   }, []);
 
-  // Solo sincronizamos el input de texto con la URL
+  // Leer la URL SOLO una vez al cargar
   useEffect(() => {
+    if (initialized) return;
+
     setNameQuery(searchParams.get("q") ?? "");
-  }, [searchParams]);
-
-  const teamFilter = searchParams.get("team") ?? "";
-  const typeFilter = searchParams.get("type") ?? "";
-
-  const allTeams = useMemo(() => {
-    const set = new Set<string>();
-    for (const p of orderedProducts) {
-      if (p.team) set.add(p.team);
-    }
-    return Array.from(set).sort();
-  }, [orderedProducts]);
+    setTeamFilter(searchParams.get("team") ?? "");
+    setTypeFilter(searchParams.get("type") ?? "");
+    setInitialized(true);
+  }, [initialized, searchParams]);
 
   const allTypes = useMemo(() => {
     const set = new Set<string>();
+
     for (const p of orderedProducts) {
-      for (const b of p.badges || []) set.add(b.label);
+      for (const b of p.badges || []) {
+        if (b.label !== "Top") {
+          set.add(b.label);
+        }
+      }
     }
+
     return Array.from(set).sort();
   }, [orderedProducts]);
 
-  function updateFilters(next: {
-    q?: string;
-    team?: string;
-    type?: string;
-  }) {
-    const params = new URLSearchParams(searchParams.toString());
+  const availableTeams = useMemo(() => {
+    const set = new Set<string>();
 
-    const q = next.q ?? (params.get("q") ?? "");
-    const team = next.team ?? (params.get("team") ?? "");
-    const type = next.type ?? (params.get("type") ?? "");
+    for (const p of orderedProducts) {
+      const matchesType =
+        typeFilter === "" ||
+        (p.badges || []).some((b) => b.label === typeFilter);
 
-    if (q.trim()) {
-      params.set("q", q.trim());
-    } else {
-      params.delete("q");
+      if (matchesType && p.team) {
+        set.add(p.team);
+      }
     }
 
-    if (team) {
-      params.set("team", team);
-    } else {
-      params.delete("team");
-    }
-
-    if (type) {
-      params.set("type", type);
-    } else {
-      params.delete("type");
-    }
-
-    const qs = params.toString();
-    router.replace(qs ? `/tienda?${qs}` : "/tienda", { scroll: false });
-  }
+    return Array.from(set).sort();
+  }, [orderedProducts, typeFilter]);
 
   const filtered = useMemo(() => {
     const q = nameQuery.trim().toLowerCase();
@@ -103,11 +90,62 @@ export default function TiendaClient() {
       const matchName = q === "" || haystack.includes(q);
       const matchTeam = teamFilter === "" || p.team === teamFilter;
       const matchType =
-        typeFilter === "" || (p.badges || []).some((b) => b.label === typeFilter);
+        typeFilter === "" ||
+        (p.badges || []).some((b) => b.label === typeFilter);
 
       return matchName && matchTeam && matchType;
     });
   }, [orderedProducts, nameQuery, teamFilter, typeFilter]);
+
+  function pushUrl(nextQ: string, nextTeam: string, nextType: string) {
+    const params = new URLSearchParams();
+
+    if (nextQ.trim()) params.set("q", nextQ.trim());
+    if (nextTeam) params.set("team", nextTeam);
+    if (nextType) params.set("type", nextType);
+
+    const qs = params.toString();
+    router.replace(qs ? `/tienda?${qs}` : "/tienda", { scroll: false });
+  }
+
+  function handleSearchChange(value: string) {
+    setNameQuery(value);
+    pushUrl(value, teamFilter, typeFilter);
+  }
+
+  function handleTeamChange(value: string) {
+    setTeamFilter(value);
+    pushUrl(nameQuery, value, typeFilter);
+  }
+
+  function handleTypeChange(value: string) {
+    const nextAvailableTeams = Array.from(
+      new Set(
+        orderedProducts
+          .filter((p) =>
+            value === ""
+              ? true
+              : (p.badges || []).some((b) => b.label === value)
+          )
+          .map((p) => p.team)
+          .filter(Boolean)
+      )
+    ).sort();
+
+    const nextTeam =
+      teamFilter && !nextAvailableTeams.includes(teamFilter) ? "" : teamFilter;
+
+    setTypeFilter(value);
+    setTeamFilter(nextTeam);
+    pushUrl(nameQuery, nextTeam, value);
+  }
+
+  function handleClearFilters() {
+    setNameQuery("");
+    setTeamFilter("");
+    setTypeFilter("");
+    router.replace("/tienda", { scroll: false });
+  }
 
   return (
     <main className="space-y-10">
@@ -122,11 +160,7 @@ export default function TiendaClient() {
             <div className="text-xs font-extrabold text-slate-700">Búsqueda por nombre</div>
             <input
               value={nameQuery}
-              onChange={(e) => {
-                const value = e.target.value;
-                setNameQuery(value);
-                updateFilters({ q: value });
-              }}
+              onChange={(e) => handleSearchChange(e.target.value)}
               placeholder="Ej: madrid, betis, españa, 24/25..."
               className="mt-2 w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm font-semibold outline-none focus:ring-2 focus:ring-fuchsia-300"
             />
@@ -139,18 +173,18 @@ export default function TiendaClient() {
             <div className="text-xs font-extrabold text-slate-700">Equipo</div>
             <select
               value={teamFilter}
-              onChange={(e) => updateFilters({ team: e.target.value })}
+              onChange={(e) => handleTeamChange(e.target.value)}
               className="mt-2 w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm font-semibold outline-none focus:ring-2 focus:ring-fuchsia-300"
             >
               <option value="">Todos</option>
-              {allTeams.map((team) => (
+              {availableTeams.map((team) => (
                 <option key={team} value={team}>
                   {team}
                 </option>
               ))}
             </select>
             <div className="mt-2 text-[11px] text-slate-500">
-              Filtra por equipo.
+              Solo salen equipos del tipo seleccionado.
             </div>
           </div>
 
@@ -158,7 +192,7 @@ export default function TiendaClient() {
             <div className="text-xs font-extrabold text-slate-700">Tipo</div>
             <select
               value={typeFilter}
-              onChange={(e) => updateFilters({ type: e.target.value })}
+              onChange={(e) => handleTypeChange(e.target.value)}
               className="mt-2 w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm font-semibold outline-none focus:ring-2 focus:ring-fuchsia-300"
             >
               <option value="">Todos</option>
@@ -178,10 +212,7 @@ export default function TiendaClient() {
             <div className="mt-2 text-2xl font-extrabold">{filtered.length}</div>
             <button
               type="button"
-              onClick={() => {
-                setNameQuery("");
-                router.replace("/tienda", { scroll: false });
-              }}
+              onClick={handleClearFilters}
               className="mt-3 inline-flex w-full items-center justify-center rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm font-extrabold hover:bg-slate-50"
             >
               Limpiar filtros

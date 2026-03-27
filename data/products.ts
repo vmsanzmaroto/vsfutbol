@@ -1016,7 +1016,7 @@ export const products: Product[] = [
     images: ["/products/portugal.jpg", "/products/portugal1.jpg"],
   },
             {
-      slug: "Portugal",
+      slug: "Portugal1",
 	  team: "Portugal",
     title: "Portugal 25/26",
     price: "20€",
@@ -1040,7 +1040,7 @@ export const products: Product[] = [
     images: ["/products/italia.jpg", "/products/italia1.jpg"],
   },
      {
-      slug: "Italia",
+      slug: "Italia1",
 	  team: "Italia",
     title: "Italia 25/26",
     price: "20€",
